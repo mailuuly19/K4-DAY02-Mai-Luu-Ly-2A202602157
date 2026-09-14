@@ -12,7 +12,7 @@
   "mean_iou": 0.655811,
   "median_iou": 0.672862,
   "class_agreement": 0.725,
-  "unmatched_mine": 27,
+  "unmatched_mine": 17,
   "unmatched_comparison": 10,
   "comparison_source": "teaching_reference",
   "interpretation_warning": "Bộ nhãn đối chiếu hỗ trợ phản hồi sau bài làm độc lập; đây không phải kết luận chất lượng sản xuất.",

@@ -62,21 +62,21 @@ Hoàn thành trước khi xem bài của người khác hoặc bộ nhãn tham c
 
 ### Tình huống C — bị che, bị mép ảnh cắt hay không đủ bằng chứng?
 
-- Ảnh và mã vật thể: `drive_033`, hộp `car` thứ 17, `xyxy ≈ (274.05, 70.75, 289.89, 91.87)`.
-- Dấu hiệu nhìn thấy khi phóng 100%: vật thể nằm hoàn toàn trong ảnh nhưng rất nhỏ và mờ; chỉ thấy hình dáng phương tiện tổng quát, chi tiết phân lớp chưa đủ rõ.
-- Giá trị `visibility`: `unclear`.
+- Ảnh và mã vật thể: `drive_038`, hộp `car` thứ 14, `xyxy ≈ (218.01, 103.09, 270.03, 158.77)`.
+- Dấu hiệu nhìn thấy khi phóng 100%: vật thể nằm hoàn toàn trong ảnh nhưng bị phương tiện khác che một phần; vẫn thấy dấu hiệu của ô tô con nhưng chưa đủ bằng chứng để kết luận hoàn toàn chắc chắn.
+- Giá trị `visibility`: `occluded`.
 - Giá trị `boundary`: `inside`.
 - Trạng thái `review_state`: `needs_review`.
-- Lý do: vật thể không bị mép ảnh cắt nhưng bằng chứng thị giác còn yếu. Tôi giữ trạng thái cần xem lại để xin xác nhận thay vì tăng độ chắc chắn không có căn cứ. Bản xuất hiện tại còn hai hộp `needs_review`, gồm hộp này và một `car` bị che trong `drive_038`.
+- Lý do: vật thể không bị mép ảnh cắt nhưng bị che một phần nên bằng chứng thị giác còn hạn chế. Tôi giữ trạng thái cần xem lại để xin xác nhận thay vì đổi lớp không có căn cứ. Bản cập nhật còn một hộp `needs_review`, chính là hộp này.
 
 ## 6. Xác nhận tự kiểm tra
 
 - [x] Đã rà đủ bốn ảnh.
 - [x] Đã kiểm vật thể thiếu và trùng.
 - [x] Đã kiểm lớp và hình học từng hộp.
-- [x] Mỗi hộp có đủ ba thuộc tính; file audit xác nhận đủ 67 giá trị cho từng thuộc tính.
-- [x] Đã rà mọi hộp `needs_review`; giữ lại hai hộp cần hỗ trợ vì chưa đủ bằng chứng để kết luận chắc chắn.
+- [x] Mỗi hộp có đủ ba thuộc tính; file audit cập nhật xác nhận đủ 57 giá trị cho từng thuộc tính.
+- [x] Đã rà mọi hộp `needs_review`; giảm từ hai xuống một hộp và giữ lại hộp cần hỗ trợ vì chưa đủ bằng chứng để kết luận chắc chắn.
 - [x] Đã hoàn thành ba tình huống và khóa bản xuất riêng trước khi dùng nguồn đối chiếu.
 - [x] Không áp dụng hình thức theo cặp; bài này làm cá nhân (`SOLO`).
 - [x] Bài riêng đã được kiểm và ghi SHA-256 trước khi nhận bộ tham chiếu của Lab Coach.
-- [x] Số vật thể thực tế: `67` — 40–60 là mục tiêu khối lượng, không phải điểm cắt; tôi giữ số thật để tiếp tục rà phạm vi.
+- [x] Số vật thể thực tế sau khi sửa: `57` (trước khi sửa: `67`) — nằm trong mục tiêu khối lượng 40–60 và phản ánh việc loại các hộp không đủ bằng chứng trong CVAT.
